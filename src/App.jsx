@@ -12,6 +12,7 @@ import ContactForm from './components/ContactForm';
 import ScrollToTop from './components/ScrollToTop';
 import Loader from './components/Loader';
 import HeroSection from './components/HeroSection';
+import AIAssistant from './components/AIAssistant';
 import { portfolioData } from './data/portfolioData';
 
 function useActiveSection(sectionIds) {
@@ -188,12 +189,12 @@ function App() {
         </section>
 
         <section id="experience" className="mt-24">
-          <SectionHeading number="04" title="Work Experience" subtitle="Career milestones shown in a modern timeline." />
-          <div className="space-y-6">
+          {/* <SectionHeading number="04" title="Work Experience" subtitle="Career milestones shown in a modern timeline." /> */}
+          {/* <div className="space-y-6">
             {experience.map((item) => (
               <TimelineItem key={item.title + item.company} entry={item} />
             ))}
-          </div>
+          </div> */}
         </section>
 
         <section id="philosophy" className="mt-24">
@@ -206,7 +207,7 @@ function App() {
         </section>
 
         <section id="highlights" className="mt-24">
-          <SectionHeading number="06" title="Technical Highlights" subtitle="Core strengths that make senior engineering stand out." />
+          <SectionHeading number="06" title="Technical Highlights" subtitle="Core strengths that reflect my growth as a full stack developer and problem solver." />
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {highlights.map((item) => (
               <motion.div whileHover={{ y: -6 }} className="glass-card rounded-3xl border border-white/10 p-6 shadow-glow transition">
@@ -258,6 +259,7 @@ function App() {
       </footer>
 
       <ScrollToTop />
+      <AIAssistant />
       {cursor.visible && (
         <>
           <div className="cursor-dot" style={{ left: cursor.x, top: cursor.y }} />
