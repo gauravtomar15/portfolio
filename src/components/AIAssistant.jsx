@@ -25,7 +25,9 @@ const MarkdownRenderer = ({ content }) => {
           strong: ({ node, ...props }) => (
             <strong className="font-semibold text-white" {...props} />
           ),
-          em: ({ node, ...props }) => <em className="italic text-gray-200" {...props} />,
+          em: ({ node, ...props }) => (
+            <em className="italic text-gray-200" {...props} />
+          ),
           code: ({ node, inline, ...props }) => (
             <code
               className={
@@ -37,10 +39,16 @@ const MarkdownRenderer = ({ content }) => {
             />
           ),
           ul: ({ node, ...props }) => (
-            <ul className="list-disc list-inside mb-2 text-gray-100" {...props} />
+            <ul
+              className="list-disc list-inside mb-2 text-gray-100"
+              {...props}
+            />
           ),
           ol: ({ node, ...props }) => (
-            <ol className="list-decimal list-inside mb-2 text-gray-100" {...props} />
+            <ol
+              className="list-decimal list-inside mb-2 text-gray-100"
+              {...props}
+            />
           ),
           li: ({ node, ...props }) => <li className="mb-1" {...props} />,
           blockquote: ({ node, ...props }) => (
@@ -140,7 +148,9 @@ export default function AIAssistant() {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showQuickActions, setShowQuickActions] = useState(messages.length === 0);
+  const [showQuickActions, setShowQuickActions] = useState(
+    messages.length === 0,
+  );
   const messagesEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -224,7 +234,7 @@ export default function AIAssistant() {
   const handleDownloadResume = () => {
     window.open(
       "https://drive.google.com/uc?export=download&id=1unTPxTlEE8ZDd44MTxkD6LDdjaVqC8OD",
-      "_blank"
+      "_blank",
     );
   };
 
@@ -238,12 +248,14 @@ export default function AIAssistant() {
   // Floating button animation
   const floatingButtonVariants = {
     idle: {
-      boxShadow: "0 0 30px rgba(0, 255, 200, 0.5), 0 0 60px rgba(139, 0, 255, 0.3), inset 0 0 30px rgba(0, 255, 200, 0.1)",
+      boxShadow:
+        "0 0 30px rgba(0, 255, 200, 0.5), 0 0 60px rgba(139, 0, 255, 0.3), inset 0 0 30px rgba(0, 255, 200, 0.1)",
       y: 0,
     },
     hover: {
       scale: 1.15,
-      boxShadow: "0 0 50px rgba(0, 255, 200, 0.8), 0 0 100px rgba(139, 0, 255, 0.6), inset 0 0 30px rgba(0, 255, 200, 0.2)",
+      boxShadow:
+        "0 0 50px rgba(0, 255, 200, 0.8), 0 0 100px rgba(139, 0, 255, 0.6), inset 0 0 30px rgba(0, 255, 200, 0.2)",
       y: -5,
     },
   };
@@ -286,7 +298,11 @@ export default function AIAssistant() {
         className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 text-white rounded-full shadow-2xl flex items-center justify-center cursor-pointer z-40 border-2 border-cyan-300 border-opacity-70 transition-all duration-300 relative group"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300 -z-10"></div>
-        <Sparkles size={28} className="animate-spin text-white drop-shadow-lg" style={{ animationDuration: "3s" }} />
+        <Sparkles
+          size={28}
+          className="animate-spin text-white drop-shadow-lg"
+          style={{ animationDuration: "3s" }}
+        />
       </motion.button>
 
       {/* Chat Window */}
@@ -374,7 +390,9 @@ export default function AIAssistant() {
                 animate={{ opacity: 1, y: 0 }}
                 className="border-t border-indigo-700 border-opacity-30 px-4 py-4 bg-gradient-to-b from-indigo-900 to-gray-800 bg-opacity-40 space-y-2"
               >
-                <p className="text-xs text-indigo-300 mb-3 font-semibold">✨ Quick Actions:</p>
+                <p className="text-xs text-indigo-300 mb-3 font-semibold">
+                  ✨ Quick Actions:
+                </p>
                 <div className="grid grid-cols-2 gap-2">
                   {quickActions.map((action, idx) => (
                     <QuickActionButton
