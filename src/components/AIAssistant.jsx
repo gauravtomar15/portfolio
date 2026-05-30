@@ -295,9 +295,8 @@ export default function AIAssistant() {
         initial="idle"
         animate="idle"
         variants={floatingButtonVariants}
-        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 text-white rounded-full shadow-2xl flex items-center justify-center cursor-pointer z-40 border-2 border-cyan-300 border-opacity-70 transition-all duration-300 relative group"
+        className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-400 hover:via-purple-400 hover:to-pink-400 text-white rounded-full shadow-2xl flex items-center justify-center cursor-pointer z-50 border-2 border-cyan-300 border-opacity-70 transition-all duration-300"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300 -z-10"></div>
         <Sparkles
           size={28}
           className="animate-spin text-white drop-shadow-lg"

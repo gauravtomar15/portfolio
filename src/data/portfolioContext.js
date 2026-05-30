@@ -82,30 +82,30 @@ export const portfolioContext = {
     }
   ],
 
-  // experience: [
-  //   {
-  //     company: "Tech Startup XYZ",
-  //     position: "Full-Stack Developer Intern",
-  //     duration: "Jan 2024 - Jun 2024",
-  //     description: "Developed and maintained full-stack features for the company's main SaaS platform.",
-  //     achievements: [
-  //       "Built 5+ new features that increased user engagement by 25%",
-  //       "Optimized database queries reducing API response time by 40%",
-  //       "Mentored 2 junior developers on React best practices"
-  //     ]
-  //   },
-  //   {
-  //     company: "Freelance Projects",
-  //     position: "Full-Stack Developer",
-  //     duration: "2023 - Present",
-  //     description: "Developed web applications for clients across various industries.",
-  //     achievements: [
-  //       "Completed 15+ projects with 100% client satisfaction",
-  //       "Built scalable systems handling 100K+ users",
-  //       "Expertise in both frontend and backend development"
-  //     ]
-  //   }
-  // ],
+  experience: [
+    {
+      company: "Tech Startup XYZ",
+      position: "Full-Stack Developer Intern",
+      duration: "Jan 2024 - Jun 2024",
+      description: "Developed and maintained full-stack features for the company's main SaaS platform.",
+      achievements: [
+        "Built 5+ new features that increased user engagement by 25%",
+        "Optimized database queries reducing API response time by 40%",
+        "Mentored 2 junior developers on React best practices"
+      ]
+    },
+    {
+      company: "Freelance Projects",
+      position: "Full-Stack Developer",
+      duration: "2023 - Present",
+      description: "Developed web applications for clients across various industries.",
+      achievements: [
+        "Completed 15+ projects with 100% client satisfaction",
+        "Built scalable systems handling 100K+ users",
+        "Expertise in both frontend and backend development"
+      ]
+    }
+  ],
 
   achievements: [
     {
@@ -162,26 +162,24 @@ export const portfolioContext = {
  * System prompt for the AI Assistant
  * This defines how the AI should behave and respond
  */
-export const systemPrompt = `You are an intelligent AI assistant for Gaurav Tomar's portfolio website. You have been provided with comprehensive information about Gaurav's background, skills, projects, and experience.
+export const systemPrompt = `You are Gaurav Tomar's AI portfolio assistant. Keep responses SHORT and CONCISE.
 
-Your responsibilities:
-1. Answer questions about Gaurav's professional background, skills, and experience
-2. Provide detailed information about his projects, technologies used, and their impact
-3. Share information about his education, achievements, and career goals
-4. Help visitors understand his expertise and whether he's the right fit for their needs
-5. Provide contact information and direct visitors to relevant resources
+KEY RULES:
+1. Answer in 2-3 sentences maximum (unless asked for details)
+2. When asked about PROJECTS: Mention only 2 top projects in 1-2 lines each. Format: "• Project Name: Brief description with tech stack"
+3. When asked about SKILLS: List 5-6 key skills only
+4. Always be professional and friendly
+5. If asked unrelated questions, politely redirect to portfolio topics
+6. For contact: provide email: gaurav@example.com
+7. Use markdown for emphasis (**bold**) but keep it minimal
 
-Guidelines:
-- Always be professional, friendly, and welcoming
-- Provide specific examples from his portfolio when relevant
-- If asked about something not in the provided context, politely say you don't have that information
-- If asked unrelated questions (like cooking recipes, math problems, etc.), politely redirect to portfolio-related topics
-- Use clear, concise language and break down complex technical concepts
-- Format your responses with proper markdown when appropriate (bold for emphasis, code blocks for technical details, etc.)
-- If the user asks to contact Gaurav, provide the email: gaurav@example.com
-- Be helpful and encourage potential collaboration
+ABOUT GAURAV:
+- Full-Stack Developer with expertise in React, Node.js, MongoDB, TypeScript, Tailwind CSS
+- 2 top projects: Smart Education System (React, Node.js, MongoDB) & E-Commerce Platform (Next.js, Stripe)
+- Open to Full-time/Contract opportunities
+- GitHub, LinkedIn, LeetCode profiles available
 
-Remember: You represent Gaurav's portfolio, so maintain a professional yet approachable tone.`;
+Remember: Be brief, helpful, and professional. No long explanations.`;
 
 /**
  * Context data formatted for API requests
