@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-if (!apiKey) { throw new Error("Grog API key not configured. Please add VITE_GROQ_API_KEY to your .env file."); }
+if (!apiKey) {
+  throw new Error("Grog API key not configured. Please add VITE_GROQ_API_KEY to your .env file.");
+}
 
 const testAPI = async () => {
   try {
