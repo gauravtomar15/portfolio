@@ -114,50 +114,67 @@ function App() {
       <main className="relative mx-auto max-w-7xl px-6 pb-24 pt-8 sm:px-8 lg:px-10">
         <HeroSection hero={hero} typedRole={typedRole} profile={profile} />
 
-        <section id="about" className="mt-24">
-          <SectionHeading number="01" title="About Me" subtitle="Professional journey, video introduction, and story timeline." />
-          <div className="grid gap-10 xl:grid-cols-[1.1fr_0.9fr]">
-            <div className="space-y-6 rounded-[2rem] border border-white/10 bg-[#08101F]/75 p-8 shadow-glow backdrop-blur-xl">
-              {about.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="text-lg leading-8 text-slate-300">
-                  {paragraph}
-                </p>
-              ))}
-              <div className="grid gap-4 sm:grid-cols-2">
-                {['Creative problem solving', 'Component-driven UI', 'Fast-loading pages', 'Scalable web systems'].map((item) => (
-                  <div key={item} className="rounded-3xl border border-white/10 bg-white/5 px-5 py-4 text-sm text-slate-200">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7 }}
-              className="glass-card border border-white/10 p-1 shadow-glow"
-            >
-              <div className="overflow-hidden rounded-[2rem] bg-[#08111F]/95">
-                <div className="border-b border-white/10 bg-[#091224]/90 px-5 py-4 text-sm uppercase tracking-[0.28em] text-cyan-200">Watch my introduction</div>
-                <div className="relative aspect-video bg-slate-950">
-                  <iframe
-                    className="h-full w-full"
-                    src={about.videoUrl}
-                    title="Introduction video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            </motion.div>
+      <section id="about" className="mt-24">
+  {/* Section Heading */}
+  <SectionHeading number="01" title="About Me" subtitle="Professional journey, video introduction, and story timeline." />
+  
+  {/* Main Grid Layout */}
+  <div className="grid gap-10 xl:grid-cols-[0.4fr_0.6fr] items-start">
+    
+    {/* Left Side: About Text Content */}
+    <div className="space-y-6 rounded-[2rem] border border-white/10 bg-[#08101F]/75 p-8 shadow-glow backdrop-blur-xl">
+      {about.paragraphs.map((paragraph) => (
+        <p key={paragraph} className="text-base leading-7 text-slate-300">
+          {paragraph}
+        </p>
+      ))}
+      
+      {/* Skill Tags / Badges */}
+      <div className="grid gap-4 sm:grid-cols-2">
+        {['Creative problem solving', 'Component-driven UI', 'Fast-loading pages', 'Scalable web systems'].map((item) => (
+          <div key={item} className="rounded-3xl border border-white/10 bg-white/5 px-5 py-4 text-sm text-slate-200">
+            {item}
           </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {/* {about.timeline.map((entry) => (
-              <TimelineItem key={entry.year + entry.title} entry={entry} />
-            ))} */}
-          </div>
-        </section>
+        ))}
+      </div>
+    </div>
+
+    {/* Right Side: Full-Width Video Box (No extra spaces inside) */}
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.7 }}
+      className="glass-card border border-white/10 p-0 shadow-glow w-full overflow-hidden rounded-[2rem]"
+    >
+      <div className="flex h-full w-full flex-col bg-[#08111F]/95">
+        {/* Video Header */}
+        <div className="border-b border-white/10 bg-[#091224]/90 px-5 py-4 text-sm uppercase tracking-[0.28em] text-cyan-200">
+          Watch my introduction
+        </div>
+        
+        {/* Full Edge-to-Edge Video Wrapper */}
+        <div className="relative aspect-video w-full bg-slate-950 rounded-b-[1.9rem] overflow-hidden">
+          <iframe
+            className="absolute inset-0 h-full w-full object-cover"
+            src={about.videoUrl}
+            title="Introduction video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </div>
+    </motion.div>
+
+  </div>
+
+  {/* Timeline Section */}
+  <div className="mt-10 grid gap-6 lg:grid-cols-2">
+    {/* {about.timeline.map((entry) => (
+      <TimelineItem key={entry.year + entry.title} entry={entry} />
+    ))} */}
+  </div>
+</section>
 
         <section id="skills" className="mt-24">
           <SectionHeading number="02" title="Skills" subtitle="Organized expertise shown in premium skill cards." />
