@@ -14,7 +14,7 @@ export default function HeroSection({ hero, typedRole, profile }) {
               {hero.headingSuffix}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">{hero.summary}</p>
-            <p className="mt-3 text-sm uppercase tracking-[0.35em] text-cyan-300/80">{typedRole}</p>
+            <p className="mt-3 h-6 min-h-[1.5rem] whitespace-nowrap overflow-hidden text-sm uppercase tracking-[0.35em] text-cyan-300/80">{typedRole}</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="flex flex-wrap items-center gap-4">

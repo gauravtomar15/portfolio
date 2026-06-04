@@ -149,12 +149,12 @@ function App() {
     >
       <div className="flex h-full w-full flex-col bg-[#08111F]/95">
         {/* Video Header */}
-        <div className="border-b border-white/10 bg-[#091224]/90 px-5 py-4 text-sm uppercase tracking-[0.28em] text-cyan-200">
+        {/* <div className="border-b border-white/10 bg-[#091224]/90 px-5 py-4 text-sm uppercase tracking-[0.28em] text-cyan-200">
           Watch my introduction
-        </div>
+        </div> */}
         
         {/* Full Edge-to-Edge Video Wrapper */}
-        <div className="relative aspect-video w-full bg-slate-950 rounded-b-[1.9rem] overflow-hidden">
+        {/* <div className="relative aspect-video w-full bg-slate-950 rounded-b-[1.9rem] overflow-hidden">
           <iframe
             className="absolute inset-0 h-full w-full object-cover"
             src={about.videoUrl}
@@ -162,7 +162,7 @@ function App() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-        </div>
+        </div> */}
       </div>
     </motion.div>
 

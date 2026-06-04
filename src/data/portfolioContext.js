@@ -7,10 +7,10 @@
 export const portfolioContext = {
   personalInfo: {
     name: "Gaurav Tomar",
-    role: "Software Engineer & Full-Stack Developer",
+    role: "Software Developer & Full-Stack Developer",
     location: "India",
-    email: "gaurav@example.com",
-    phone: "+91-XXXXXXXXXX",
+    email: "gauravtomar977@gmail.com",
+    phone: "+91-9639508340",
     profileImage: "/photo.jpg"
   },
 
@@ -44,44 +44,91 @@ export const portfolioContext = {
     other: ["Data Structures & Algorithms", "System Design", "Problem Solving", "Responsive Design"]
   },
 
-  projects: [
+//   projects: [
+//     {
+//       name: "Smart Education System",
+//       description: "A comprehensive web platform for educational management with student, teacher, and admin portals.",
+//       technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
+//       features: ["User authentication", "Course management", "Assignment submission", "Progress tracking", "Real-time notifications"],
+//       link: "https://github.com/gauravtomar",
+//       liveLink: "https://smart-education.example.com",
+//       impact: "Used by 500+ students and 50+ faculty members"
+//     },
+//     {
+//       name: "College Management System",
+//       description: "Integrated ERP system for college administration handling academics, attendance, and infrastructure.",
+//       technologies: ["React", "Express.js", "MongoDB", "MySQL"],
+//       features: ["Student enrollment", "Attendance tracking", "Timetable management", "Fee management", "Report generation"],
+//       link: "https://github.com/gauravtomar",
+//       liveLink: "https://college-management.example.com",
+//       impact: "Streamlined college operations, 40% reduction in paperwork"
+//     },
+//     {
+//       name: "Real-time Chat Application",
+//       description: "Full-featured chat application with real-time messaging and user presence.",
+//       technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
+//       features: ["Real-time messaging", "User authentication", "Typing indicators", "Message history", "Group chats"],
+//       link: "https://github.com/gauravtomar",
+//       impact: "Handles 10,000+ concurrent users"
+//     },
+//     {
+//       name: "College Management System",
+// description: "College education platform with student-teacher interaction, course management, assignments, quizzes, and performance tracking.",
+// technologies: ["Next.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+// features: [
+//   "Student & teacher authentication",
+//   "Course and study material management",
+//   "Assignment & quiz system",
+//   "Attendance and performance tracking",
+//   "Admin dashboard"
+// ],
+//       link: "https://github.com/smart-poject-management/smart-project-management-system",
+//       liveLink: "https://smart-project-management-system-o1t.vercel.app",
+//       impact: "$100K+ GMV in first quarter"
+//     }
+//   ],
+ projects: [
     {
-      name: "Smart Education System",
-      description: "A comprehensive web platform for educational management with student, teacher, and admin portals.",
-      technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      features: ["User authentication", "Course management", "Assignment submission", "Progress tracking", "Real-time notifications"],
-      link: "https://github.com/gauravtomar",
-      liveLink: "https://smart-education.example.com",
-      impact: "Used by 500+ students and 50+ faculty members"
+      id: 1,
+      title: 'DevConnect App',
+      category: 'Full Stack',
+      description: 'Full-stack developer matchmaking platform with real-time chat and secure authentication.',
+      tech: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+      live: 'https://gauravdevsocial.site',
+      github: 'https://github.com/gauravtomar15/devTinder-Web',
+      featured: true
     },
     {
-      name: "College Management System",
-      description: "Integrated ERP system for college administration handling academics, attendance, and infrastructure.",
-      technologies: ["React", "Express.js", "MongoDB", "MySQL"],
-      features: ["Student enrollment", "Attendance tracking", "Timetable management", "Fee management", "Report generation"],
-      link: "https://github.com/gauravtomar",
-      liveLink: "https://college-management.example.com",
-      impact: "Streamlined college operations, 40% reduction in paperwork"
+      id: 2,
+      title: 'Real-Time Chat Application',
+      category: 'Full Stack',
+      description: 'Scalable real-time messaging system with WebSocket communication and responsive UI.',
+      tech: ['React', 'Node.js','Socket.io', 'Tailwind CSS'],
+      live: '#',
+      github: 'https://github.com/gauravtomar15/Chat-app',
+      featured: true
     },
     {
-      name: "Real-time Chat Application",
-      description: "Full-featured chat application with real-time messaging and user presence.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      features: ["Real-time messaging", "User authentication", "Typing indicators", "Message history", "Group chats"],
-      link: "https://github.com/gauravtomar",
-      impact: "Handles 10,000+ concurrent users"
+      id: 3,
+      title: 'ReelStream (TMDB API)',
+      category: 'Frontend',
+      description: 'eature-rich movie streaming UI with AI-powered search and optimized frontend performance.',
+      tech: ['React', 'TMDB API', 'Tailwind CSS'],
+      live: 'https://netflix-gpt-6cth.vercel.app/',
+      github: 'https://github.com/gauravtomar15/NETFLIX_GPT',
+      featured: true
     },
     {
-      name: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with product catalog, shopping cart, and payment integration.",
-      technologies: ["Next.js", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
-      features: ["Product search & filter", "Shopping cart", "Secure payments", "Order tracking", "Admin dashboard"],
-      link: "https://github.com/gauravtomar",
-      liveLink: "https://ecommerce.example.com",
-      impact: "$100K+ GMV in first quarter"
+      id: 4,
+      title: 'College Management System',
+      category: 'Full Stack Project Management System',
+      description: "College education platform with student-teacher interaction, course management, assignments, quizzes, and performance tracking.",
+      tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+      live: 'https://github.com/smart-poject-management/smart-project-management-system',
+      github: 'https://github.com/smart-poject-management/smart-project-management-system',
+      featured: false
     }
   ],
-
   experience: [
     {
       company: "Tech Startup XYZ",
@@ -162,7 +209,7 @@ export const portfolioContext = {
  * System prompt for the AI Assistant
  * This defines how the AI should behave and respond
  */
-export const systemPrompt = `You are Gaurav Tomar's AI portfolio assistant. Keep responses SHORT and CONCISE.
+export const systemPrompt = `You are Gaurav Tomar's AI portfolio assistant. Keep responses INTERMEDIATE and CONCISE.
 
 KEY RULES:
 1. Answer in 2-3 sentences maximum (unless asked for details)
@@ -175,7 +222,7 @@ KEY RULES:
 
 ABOUT GAURAV:
 - Full-Stack Developer with expertise in React, Node.js, MongoDB, TypeScript, Tailwind CSS
-- 2 top projects: Smart Education System (React, Node.js, MongoDB) & E-Commerce Platform (Next.js, Stripe)
+- 4 top projects:  College Management System (React, Node.js, MongoDB) & DevConnect App (React, Node.js, MongoDB, payment integration)
 - Open to Full-time/Contract opportunities
 - GitHub, LinkedIn, LeetCode profiles available
 

@@ -68,9 +68,9 @@ export const portfolioData = {
       { label: 'Download Resume', href: 'https://drive.google.com/uc?export=download&id=1unTPxTlEE8ZDd44MTxkD6LDdjaVqC8OD', variant: 'secondary' }
     ],
     metrics: [
-      { label: 'Live products', value: '16+' },
-      { label: 'Years of experience', value: '4+' },
-      { label: 'User-focused deliveries', value: '12+' }
+      { label: 'Live products', value: '10+' },
+      { label: 'Years of experience', value: '1+' },
+      { label: 'User-focused deliveries', value: '5+' }
     ]
   },
   about: {
@@ -154,7 +154,7 @@ export const portfolioData = {
       id: 3,
       title: 'ReelStream (TMDB API)',
       category: 'Frontend',
-      description: 'eature-rich movie streaming UI with AI-powered search and optimized frontend performance.',
+      description: 'Feature-rich movie streaming UI with AI-powered search and optimized frontend performance.',
       tech: ['React', 'TMDB API', 'Tailwind CSS'],
       live: 'https://netflix-gpt-6cth.vercel.app/',
       github: 'https://github.com/gauravtomar15/NETFLIX_GPT',
@@ -162,12 +162,12 @@ export const portfolioData = {
     },
     {
       id: 4,
-      title: 'AI Notes Companion',
-      category: 'AI/Other',
-      description: 'A notes assistant prototype with AI-driven summaries and fast, responsive mobile-first UI.',
-      tech: ['React', 'Firebase', 'OpenAI'],
-      live: '#',
-      github: '#',
+      title: 'College Management System',
+      category: 'Full Stack',
+      description: "College education platform with student-teacher interaction, course management, assignments, quizzes, and performance tracking.",
+      tech: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
+      live: 'https://smart-project-management-system-o1t.vercel.app',
+      github: 'https://github.com/smart-poject-management/smart-project-management-system',
       featured: false
     }
   ],
