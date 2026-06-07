@@ -78,7 +78,7 @@ export const portfolioData = {
       "I'm a Computer Science graduate (B.Tech, AKTU '26, CGPA 8.1) with a strong foundation in full-stack development.",
       " I specialize in building performant, scalable front-end systems using React, TypeScript, and modern CSS — paired with solid backend knowledge in Node.js, Express, and MongoDB. I care deeply about code quality, component architecture, and delivering experiences that feel fast and intentional."
     ],
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    videoUrl: 'https://www.youtube.com/embed/J5ju8263jGQ',
     timeline: [
       {
         title: 'Started my professional journey',

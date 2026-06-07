@@ -149,20 +149,21 @@ function App() {
     >
       <div className="flex h-full w-full flex-col bg-[#08111F]/95">
         {/* Video Header */}
-        {/* <div className="border-b border-white/10 bg-[#091224]/90 px-5 py-4 text-sm uppercase tracking-[0.28em] text-cyan-200">
+         <div className="border-b border-white/10 bg-[#091224]/90 px-5 py-4 text-sm uppercase tracking-[0.28em] text-cyan-200">
           Watch my introduction
-        </div> */}
+        </div>
         
         {/* Full Edge-to-Edge Video Wrapper */}
-        {/* <div className="relative aspect-video w-full bg-slate-950 rounded-b-[1.9rem] overflow-hidden">
+        <div className="relative aspect-video w-full bg-[#08101F] rounded-b-[1.9rem] overflow-hidden">
           <iframe
-            className="absolute inset-0 h-full w-full object-cover"
-            src={about.videoUrl}
+            className="absolute inset-0 min-h-full min-w-full h-full w-full object-cover"
+            style={{ border: 0 }}
+            src={`${about.videoUrl}?rel=0&modestbranding=1`}
             title="Introduction video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-        </div> */}
+        </div>
       </div>
     </motion.div>
 
@@ -272,7 +273,7 @@ function App() {
 
       <footer className="border-t border-white/10 bg-[#090E19]/90 py-8 text-center text-sm text-slate-500">
         <p>Designed with premium motion, glassmorphism, and professional engineering craftsmanship.</p>
-        <p className="mt-3 text-slate-400">© 2026 Your Name. Built with React, Tailwind, and Framer Motion.</p>
+        <p className="mt-3 text-slate-400">© 2026 Gaurav Tomar. Built with React, Tailwind, and Framer Motion.</p>
       </footer>
 
       <ScrollToTop />
